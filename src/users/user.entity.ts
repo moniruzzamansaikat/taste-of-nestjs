@@ -14,9 +14,15 @@ export class User {
   @Column()
   password: string;
 
-  @Column()
+  @Column({
+    default: 1,
+    type: 'tinyint',
+  })
   status: number;
 
-  @Column()
+  @Column({
+    default: 0,
+    type: 'decimal'
+  })
   balance: number;
 }
